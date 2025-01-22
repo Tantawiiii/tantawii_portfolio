@@ -19,7 +19,7 @@ class Portfolio extends StatelessWidget {
         title: 'Personal Website',
         theme: _buildTheme(Brightness.dark),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.mainPage,
+        initialRoute: Routes.homePage,
         onGenerateRoute: appRouter.generateRoute,
       ),
     );
@@ -27,7 +27,6 @@ class Portfolio extends StatelessWidget {
 
   ThemeData _buildTheme(brightness) {
     var baseTheme = ThemeData(brightness: brightness);
-    // TODO : check this later
     return baseTheme.copyWith(
       textTheme: GoogleFonts.latoTextTheme(baseTheme.textTheme),
     );

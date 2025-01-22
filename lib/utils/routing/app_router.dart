@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tantawii_portfolio/utils/routing/routes.dart';
+import 'package:tantawii_portfolio/web/home_page.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -7,10 +8,10 @@ class AppRouter {
     final arguments = settings.arguments;
 
     switch (settings.name) {
-      // case Routes.mainPage:
-      //   return MaterialPageRoute(
-      //     builder: (_) => const Main(),
-      //   );
+      case Routes.homePage:
+        return MaterialPageRoute(
+          builder: (_) => const HomePage(),
+        );
       default:
         return null;
     }
