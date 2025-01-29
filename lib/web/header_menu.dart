@@ -1,5 +1,9 @@
+import 'package:bounce/bounce.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tantawii_portfolio/utils/constants/colors.dart';
+import 'package:tantawii_portfolio/utils/constants/text_strings.dart';
 
 import '../utils/helpers/global_keys.dart';
 import '../utils/helpers/spacing.dart';
@@ -10,69 +14,98 @@ class HeaderMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-       SvgPicture.asset("assets/Logo.svg"),
-        horizontalSpace(100),
-        InkWell(
-          onTap: () {
-            Scrollable.ensureVisible(
-              GlobalKeys.aboutKey.currentContext!,
-              duration: const Duration(milliseconds: 200),
-              curve: Curves.easeInOut,
-            );
-          },
-          child: Text(
-            'About',
-            style: TextStyles.font20WhiteMedium,
-          ),
-        ),
-        horizontalSpace(40),
-        InkWell(
-          onTap: () {
-            Scrollable.ensureVisible(
-              GlobalKeys.servicesKey.currentContext!,
-              duration: const Duration(milliseconds: 200),
-              curve: Curves.easeInOut,
-            );
-          },
-          child: Text(
-            'Services',
-            style: TextStyles.font20WhiteMedium,
-          ),
-        ),
-        horizontalSpace(40),
-        InkWell(
-          onTap: () {
-            Scrollable.ensureVisible(
-              GlobalKeys.portfolioKey.currentContext!,
-              duration: const Duration(milliseconds: 200),
-              curve: Curves.easeInOut,
-            );
-          },
-          child: Text(
-            'Portfolio',
-            style: TextStyles.font20WhiteMedium,
-          ),
-        ),
-        horizontalSpace(40),
-        InkWell(
-          onTap: () {
-            Scrollable.ensureVisible(
-              GlobalKeys.hobbiesKey.currentContext!,
-              duration: const Duration(milliseconds: 200),
-              curve: Curves.easeInOut,
-            );
-          },
-          child: Text(
-            'Hobbies',
-            style: TextStyles.font20WhiteMedium,
-          ),
-        ),
+    return Container(
+      padding:  EdgeInsets.symmetric(horizontal: 140.h, ),
+      width: double.infinity,
+      height: 76.h,
+      decoration: BoxDecoration(
+        color: TColors.headerBackground,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+         Row(
+           children: [
+             SvgPicture.asset("assets/Logo.svg",width: 420.w,height: 47.h,),
+           ],
+         ),
+          Row(
+            children: [
+              Bounce(
+                onTap: () {
+                  Scrollable.ensureVisible(
+                    GlobalKeys.aboutKey.currentContext!,
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                child: Text(
+                  TTexts.tAbout,
+                  style: TextStyles.font16WhiteMedium,
+                ),
+              ),
+              horizontalSpace(60),
+              Bounce(
+                onTap: () {
+                  Scrollable.ensureVisible(
+                    GlobalKeys.servicesKey.currentContext!,
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                child: Text(
+                  TTexts.tWorkEX,
+                  style: TextStyles.font16WhiteMedium,
+                ),
+              ),
+              horizontalSpace(60),
+              Bounce(
+                onTap: () {
+                  Scrollable.ensureVisible(
+                    GlobalKeys.portfolioKey.currentContext!,
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                child: Text(
+                  TTexts.tSkills,
+                  style: TextStyles.font16WhiteMedium,
+                ),
+              ),
+             horizontalSpace(60),
+              Bounce(
+                onTap: () {
+                  Scrollable.ensureVisible(
+                    GlobalKeys.hobbiesKey.currentContext!,
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                child: Text(
+                  TTexts.tProjects,
+                  style: TextStyles.font16WhiteMedium,
+                ),
+              ),
 
-      ],
+              horizontalSpace(60),
+              Bounce(
+                onTap: () {
+                  Scrollable.ensureVisible(
+                    GlobalKeys.hobbiesKey.currentContext!,
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                child: Text(
+                  TTexts.tContact,
+                  style: TextStyles.font16WhiteMedium,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

@@ -20,5 +20,13 @@ class TTexts {
   static const String onBoardingSubTitle2 = "Sport, Limousine, Terrain... whatever your preference is, we have it.";
   static const String onBoardingSubTitle3 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
 
+// -- Headers Texts
+  static const String tAbout = "About";
+  static const String tWorkEX = "Work Experience";
+  static const String tSkills = "Skills";
+  static const String tProjects = "Projects";
+  static const String tContact = "Contact";
+
+
 }
 
