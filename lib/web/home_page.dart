@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:tantawii_portfolio/utils/constants/colors.dart';
 
+import 'about_section.dart';
 import 'header_menu.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
           children: [
             HeaderMenu(),
             //
-
+            AboutSection(),
           ],
 
         ),
