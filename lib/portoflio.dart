@@ -16,7 +16,7 @@ class Portfolio extends StatelessWidget {
       designSize: const Size(1440, 1024),
       minTextAdapt: true,
       child: MaterialApp(
-        title: 'Personal Website',
+        title: 'Tantawii Portfolio',
         theme: _buildTheme(Brightness.dark),
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.homePage,
