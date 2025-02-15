@@ -76,6 +76,8 @@ flutter:
      - assets/
      - assets/images/
      - assets/images/d3_img.png
+     - assets/svgs/
+     - assets/svgs/back_profile_img.svg
 
 
   fonts:
