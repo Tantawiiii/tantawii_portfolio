@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tantawii_portfolio/utils/constants/image_strings.dart';
-import '../utils/helpers/global_keys.dart';
+import '../../utils/helpers/global_keys.dart';
+import '../widgets/build_name_abouts.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({super.key});
@@ -38,29 +39,11 @@ class AboutSection extends StatelessWidget {
           ],
         ),
         Positioned(
-          top: -20, // Adjust this value as needed
-          child: Text.rich(
-            TextSpan(
-              children: [
-                TextSpan(
-                  text: "Hello! I am ",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-                TextSpan(
-                  text: "Ahmed Tantawii",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purpleAccent,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          top: 0,
+          bottom: 0,
+          right: 0,
+          left: 520,
+          child: buildHelloText(),
         ),
       ],
     );
@@ -81,30 +64,9 @@ class AboutSection extends StatelessWidget {
         Positioned(
           top: 0,
           bottom: 0,
-          right: -50,
-          left: -9,
-          child: Text.rich(
-            TextSpan(
-              children: [
-                TextSpan(
-                  text: "Hello! I am ",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-                TextSpan(
-                  text: "Ahmed Tantawii",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purpleAccent,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          right: 0,
+          left: 180,
+          child: buildHelloText(),
         ),
       ],
     );

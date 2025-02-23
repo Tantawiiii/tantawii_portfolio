@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tantawii_portfolio/utils/constants/colors.dart';
+import 'package:tantawii_portfolio/utils/helpers/spacing.dart';
 
 import 'about_section.dart';
 import 'header_menu.dart';
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             HeaderMenu(),
-            //
+            verticalSpace(50),
             AboutSection(),
           ],
 

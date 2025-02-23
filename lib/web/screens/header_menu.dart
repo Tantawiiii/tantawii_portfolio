@@ -1,14 +1,15 @@
 import 'package:bounce/bounce.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tantawii_portfolio/utils/constants/colors.dart';
 import 'package:tantawii_portfolio/utils/constants/text_strings.dart';
 
-import '../utils/constants/image_strings.dart';
-import '../utils/helpers/global_keys.dart';
-import '../utils/helpers/spacing.dart';
-import '../utils/theming/styles.dart';
+import '../../utils/constants/image_strings.dart';
+import '../../utils/helpers/global_keys.dart';
+import '../../utils/helpers/spacing.dart';
+import '../../utils/theming/styles.dart';
 
 class HeaderMenu extends StatelessWidget {
   const HeaderMenu({super.key});
@@ -16,9 +17,9 @@ class HeaderMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20.w),
+      padding: EdgeInsets.symmetric(horizontal: 20.w,),
       width: double.infinity,
-      height: 76.h,
+      height: 80.h,
       decoration: BoxDecoration(
         color: TColors.headerBackground,
       ),
@@ -84,10 +85,13 @@ class HeaderMenu extends StatelessWidget {
       },
       child: Text(
         text,
-        style: TextStyles.font16WhiteMedium,
+        style: kIsWeb
+            ? TextStyles.font18WhiteMedium
+            : TextStyles.font16WhiteMedium,
       ),
     );
   }
+
 
   void _showMobileMenu(BuildContext context) {
     showModalBottomSheet(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tantawii_portfolio/utils/routing/routes.dart';
-import 'package:tantawii_portfolio/web/home_page.dart';
+import 'package:tantawii_portfolio/web/screens/home_page.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
