@@ -2,24 +2,14 @@ import 'package:flutter/widgets.dart';
 
 class GlobalKeys {
   static final GlobalKey aboutKey = GlobalKey();
-  static final GlobalKey servicesKey = GlobalKey();
-  static final GlobalKey portfolioKey = GlobalKey();
-  static final GlobalKey hobbiesKey = GlobalKey();
-  static final GlobalKey letsTalkKey = GlobalKey();
+  static final GlobalKey workExperienceKey = GlobalKey();
+  static final GlobalKey skillsKey = GlobalKey();
+  static final GlobalKey projectsKey = GlobalKey();
+  static final GlobalKey contactKey = GlobalKey();
 
+  // Legacy aliases
+  static GlobalKey get servicesKey => workExperienceKey;
+  static GlobalKey get portfolioKey => skillsKey;
+  static GlobalKey get hobbiesKey => projectsKey;
+  static GlobalKey get letsTalkKey => contactKey;
 }
-
-
-/**
- *
- *
- *    onTap: () {
-    Scrollable.ensureVisible(
-    GlobalKeys.aboutKey.currentContext!,
-    duration: const Duration(milliseconds: 200),
-    curve: Curves.easeInOut,
-    );
-    },
- *
- *
- */
